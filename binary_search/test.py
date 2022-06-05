@@ -1,8 +1,7 @@
-import unittest
 import yaml
+import unittest
 
-
-from solution import Solution
+from binary_search.solution import Solution
 
 
 class TestBinarySearch(unittest.TestCase):
@@ -23,7 +22,3 @@ class TestBinarySearch(unittest.TestCase):
             expected = test_case['output']
             actual = solution.search(nums, target)
             self.assertEqual(expected, actual)
-
-
-if __name__ == '__main__':
-    unittest.main()

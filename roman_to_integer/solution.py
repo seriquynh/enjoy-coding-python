@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-
-import unittest
-import yaml
-
-
 class Solution:
     data = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     group_one = ['I', 'X', 'C', 'M']
@@ -65,26 +59,3 @@ class Solution:
                 break
 
         return result
-
-
-class TestRomanToInteger(unittest.TestCase):
-
-    def test_roman_to_integer(self):
-        with open("../enjoy-coding/roman-to-integer/test-cases.yaml", "r") as stream:
-            try:
-                test_cases = yaml.safe_load(stream)
-            except yaml.YAMLError as exc:
-                print(exc)
-                return
-
-        solution = Solution()
-
-        for test_case in test_cases['test_cases']:
-            input_value = test_case[0]
-            expected = test_case[1]
-            actual = solution.romanToInt(input_value)
-            self.assertEqual(expected, actual)
-
-
-if __name__ == '__main__':
-    unittest.main()
