@@ -1,22 +1,15 @@
-import yaml
 import unittest
 
+import helpers
 from binary_search.solution import Solution
 
 
 class TestBinarySearch(unittest.TestCase):
 
     def test_binary_search(self):
-        with open("../enjoy-coding/binary-search/test-cases.yaml", "r") as stream:
-            try:
-                test_cases = yaml.safe_load(stream)
-            except yaml.YAMLError as exc:
-                print(exc)
-                return
-
         solution = Solution()
 
-        for test_case in test_cases['test_cases']:
+        for test_case in helpers.get_test_cases('binary-search'):
             nums = test_case['input']['nums']
             target = test_case['input']['target']
             expected = test_case['output']
