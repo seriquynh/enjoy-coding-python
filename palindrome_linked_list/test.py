@@ -10,7 +10,7 @@ class TestPalindromeLinkedList(unittest.TestCase):
         solution = Solution()
 
         for test_case in helpers.get_test_cases('palindrome-linked-list'):
-            input_value = test_case[0]
-            expected = test_case[1]
+            input_value = test_case['input']
+            expected = test_case['output']
             actual = solution.list_is_palindrome(input_value)
             self.assertEqual(expected, actual)

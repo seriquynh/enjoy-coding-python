@@ -10,7 +10,7 @@ class TestRomanToInteger(unittest.TestCase):
         solution = Solution()
 
         for test_case in helpers.get_test_cases('roman-to-integer'):
-            input_value = test_case[0]
-            expected = test_case[1]
+            input_value = test_case['input']
+            expected = test_case['output']
             actual = solution.romanToInt(input_value)
             self.assertEqual(expected, actual)
