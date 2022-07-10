@@ -1,3 +1,5 @@
 # Enjoy Coding Python
 
-Problems and Test Cases are [here](https://github.com/seriquynh/enjoy-coding).
+This repository contains solutions in Python3.
+
+For more details, please visit [here](https://github.com/seriquynh/enjoy-coding)!
